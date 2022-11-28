@@ -1,0 +1,62 @@
+@keyframes appearFromNothing {
+    from{
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+    }
+    to{
+        visibility: visible;
+        height: 3em;
+        opacity: 1;
+    }
+}
+@keyframes knop1 {
+    0%{
+        background: rgba(39, 65, 238, 0.55);
+    }
+    100%{
+        background: rgba(73, 201, 243, 0.27);
+    }
+}
+
+@keyframes animate
+{
+    0%, 100%
+    {
+        transform: translate(-270%, 10%);
+    }
+    50%
+    {
+        transform: translate(10%, -10%);
+    }
+}
+
+@keyframes animate2
+{
+    0%, 100%
+    {
+        transform: translate(0, 0);
+    }
+
+    25%
+    {
+        transform: translate(-50px, -50px);
+    }
+
+    75%
+    {
+        transform: translate(50px, 50px);
+    }
+}
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+

@@ -1,0 +1,120 @@
+@media (max-width: 900px) {
+
+    header{
+        position: relative;
+        min-height: fit-content;
+        padding: 0 0 0 0;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        margin: 0;
+    }
+
+    /*лого*/
+    h1{
+        position: relative;
+        left: 10px;
+        visibility: visible;
+    }
+
+    /*кнопка бургер*/
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: sticky;
+        top: 20px;
+        left: 20px;  width: 26px;
+        height: 26px;  cursor: pointer;
+        z-index: 1;
+    }
+    .menu__btn span,
+    .menu__btn span::before,
+    .menu__btn span::after {
+        display: block;
+        position: absolute;  width: 100%;
+        height: 2px;  background-color: #002595;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    /*навигация*/
+    #mainMenu{
+        display: block;
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        width: 90vw;
+        margin: auto;
+        float: none;
+        list-style: none;
+        text-align: center;
+        height: fit-content;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #mainMenu ul{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    #mainMenu ul li, .left, .right {
+        display: block;
+        margin: 2px;
+        font-size: 20px;
+        font-weight: 600;  text-decoration: none;
+        border-radius: 10px;
+    }
+    #mainMenu ul li a{
+        position:relative;
+        display: block;
+        font-weight: bold;
+        color:white;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ #mainMenu {
+        opacity: 1;
+        position: relative;
+        left: 0;
+    }
+    #menu__toggle:checked ~ #mainMenu ul li{
+        animation-name: appearFromNothing;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
+    }
+    #menu__toggle:checked ~ h1 {
+        visibility: hidden;
+        position: fixed;
+    }
+
+    .menu__btn span,
+    .menu__btn span::before,
+    .menu__btn span::after {
+        transition-duration: .25s;
+    }
+    #galleryH2{
+        opacity: 0;
+        height: 0;
+    }
+    .imageGallery img{
+        width: 80vw;
+    }
+}
