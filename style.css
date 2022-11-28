@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+h1{
+    position: relative;
+    float: left;
+    margin: auto auto auto auto;
+}    
+h2{
+    color: #004C95;
+    font-size: 40px;
+    text-align: center;
+}
+h3{
+    color: #3D99F3;
+    margin: 0 0 0 0;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+*, *:before, *:after{
+  font-family: 'Nunito', sans-serif;
+}
+body{
+    margin: 0;
+}
+header{
+    position: relative;
+    min-height: 100px;
+    padding: 20px 10% 0 20px;
+    margin-bottom: 30px;
+}
+main{
+    margin: 30px 0 0 0;
+    position: relative;
+    min-height: 70vh;
+    padding-left: 10px;
+    background: linear-gradient(#0077e61a, rgba(255, 192, 203, 0));
+}
+aside{
+    background: linear-gradient(#0077e61a, rgba(255, 192, 203, 0));
+    width: 20%;
+}
+footer {
+    z-index: 2;
+    position: relative;
+    min-height: 100px;
+    padding: 20px;
+    background: #004C95;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+footer a{
+
+    font-size: 20px;
+    color:#fff;
+}
+footer a:visited{
+
+    color: #3D99F3;
+}
+nav {
+    position: relative;
+    float: right;
+    margin: auto auto auto auto;
+    height:60px;
+    background-color: #2B6DAC;
+    border-radius: 10px;
+    min-width: 60vw;
+    max-width: 80vw;
+}
+nav ul {
+    margin:0;
+    padding:0;
+    width: 100%;
+    list-style-type: none;
+    display:flex;
+    border-radius: 10px;
+}
+nav ul li {
+    line-height:60px;
+    border-width: 2px;
+    width: 100%;
+    border-style:dashed;
+    border-color: #0075E6;
+    text-align:center;
+    display:inline;
+    min-width: 25%;
+    background-color: #0075E6;
+  
+} 
+nav ul li:hover{
+    background-color: #2B6DAC;
+    border-style:groove;
+    border-color: #0075E6;
+}
+nav ul li a {
+    width: 100%;
+    position:relative;
+    text-align: center;
+    box-sizing: content-box;
+    display: block;
+    font-weight: bold;
+    margin: 0;
+    color:white;
+}
+address{
+}
+address h3{
+    color: #fff;
+    text-align: left;
+}
+fieldset{
+    width: fit-content;
+}
+#contacts{
+}
+#mainPartAndReviews{
+    display: flex;
+}
+
+
+#mainPart{
+    /*float: left;
+    background-color: red;*/
+    width: 80%;
+    position: relative;
+}
+#reviews{
+    position: sticky;
+    top: 0;
+}
+#purchase{
+    display: flex;
+    align-content: center;
+    margin: auto auto auto auto;
+}
+#priceAndBuy{
+    text-align: center;
+    margin: auto auto auto auto;
+}
+.tel{
+    color: #fff;
+    font-size: 30px;
+    margin: 6%;
+    position: relative;
+    text-decoration:underline;
+}
+.email{
+    color: #fff;
+    margin: 6%;
+    font-size: 30px;
+    position: relative;
+    text-decoration:underline;
+}
+
+.left{
+    border-radius: 10px 0 0 10px;
+}
+.right{
+    border-radius: 0 10px 10px 0;
+}
+.price{
+    font-size: 70px;
+    font-weight: 1;
+}
+.buy{
+    font-size: 50px;
+    background-color: #3D99F3;
+    color: white;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+}
+.buy:hover{
+    background-color: #004C95;
+}
+.buy:active{
+    background-color: #004C95;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 50px;
+}
+.review{
+    background-color: #6db0f38c;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.customer_name{
+    color: #004C95;
+}
+.review_text{
+    color: #fff;
+    font-style: italic;
+}
+.floatingCharacter{
+    float: left;
+}
+.fixedCharacter{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+form{
+    background-color:#6db0f38c;
+    padding: 2vh;
+    margin: auto auto 1vh auto;
+    width: fit-content;
+    border-radius: 15px;
+}
+.sub1{
+    border-radius: 10px;
+    background-color: #0075E6;
+    padding: 10px 4px 10px 4px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+
+}
+.sub1:hover{
+    background-color: #004C95;
+}
+.sub1:active{
+    background-color: #002595;;
+}
+::placeholder{
+    font-weight: lighter;
+    color: rgba(11, 42, 73, 0.32);
+}
+input:focus{
+    background-color: aliceblue;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+
+
+
