@@ -53,7 +53,7 @@
         opacity: 0;
         visibility: hidden;
         top: 0;
-        width: 90vw;
+        width: 70vw;
         margin: auto;
         float: none;
         list-style: none;
@@ -121,6 +121,13 @@
     footer #socials ul{
         flex-direction: row;
         width: 80vw;
+    }
+    body{
+        display: grid;
+        grid-template-areas: "h h h"
+        "m m m"
+        "a a a"
+        "f f f";
     }
 }
 @media (max-width: 1100px) {

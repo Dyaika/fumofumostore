@@ -38,7 +38,7 @@
 
     <!-- Картинка -->
     <section class="image_section">
-        <img data-image="V1" src="images/yuyukoV1.jpg" alt="">
+        <img id="fumoImage" src="images/yuyukoV1.jpg" alt="">
     </section>
 
     <!-- Краткое описание -->
@@ -48,15 +48,15 @@
 
     <!-- Выбор версии -->
     <section class="version_section">
-        <span>Версия</span>
-        <div class="color-choose">
+        <h3>Версия</h3>
+        <div class="version-choose">
             <div>
-                <input type="radio" id="v1" name="vers" value="ver1" checked>
-                <label for="v1"><span>V1</span></label>
+                <input type="radio" id="v1" name="vers" value="ver1" checked class="vers-input">
+                <label for="v1" data-ver="V1" class="vers-label"><span>V1</span></label>
             </div>
             <div>
-                <input type="radio" id="v1_5" name="vers" value="ver1_5">
-                <label for="v1_5"><span>V1.5</span></label>
+                <input type="radio" id="v1_5" name="vers" value="ver1_5" class="vers-input">
+                <label for="v1_5" data-ver="V1_5" class="vers-label"><span>V1.5</span></label>
             </div>
         </div>
 
@@ -73,6 +73,7 @@
 
     <!-- Полное описание -->
     <section class="full_description_section">
+        <h3>Описание</h3>
         <p><pre>
     "Я видела зловещий сон...
     Весенний ветер унес всю нашу весну.
@@ -81,16 +82,37 @@
         <p>
             На этот раз мы ещё более тщательно воспроизвели детали костюма! Рост сидя составляет около 20 см, а шляпа является съёмной
         </p>
-        <div>Год выпуска:<div id="year">2010</div></div>
+        <div id="info-for-script">yuyuko</div>
+        <h3 id="info">Информация о продукте</h3>
+        <ul>
+            <li>Модель: <b>Touhou Plushie Series [Yuyuko Saigyouji]</b></li>
+            <li>Тематика: <b>Touhou Project</b></li>
+            <li>Цена: <b>4070 иен</b></li>
+            <li>Дата выхода: <b id="year">2010</b></li>
+            <li>Высота: <b>20 см</b></li>
+            <li>Продавец: <b>Gift</b></li>
+        </ul>
     </section>
+
 
 </main>
 <aside>
-    Эсайд. Отзывы
+    <div id="reviews">
+        <div class="review">
+            <div class="customer_name">DoofHD:</div>
+            <div class="review_text">"Все хорошо, доставили быстро. Среди плюсов назову что шляпу действительно можно снимать. Из минусов что после этого она потерялась"</div>
+        </div>
+        <div class="review">
+            <div class="customer_name">Sentry:</div>
+            <div class="review_text">"Все плохо, не доставили. Из плюсов - шляпа не терялась"</div>
+        </div>
+        <div class="review">
+            <div class="customer_name">Leskinen A.:</div>
+            <div class="review_text">"Where shaman girls, Linthalo?"</div>
+        </div>
+    </div>
 </aside>
-<div id="info-for-script">yuyuko</div>
-<!-- скрипт -->
-<script src="script-change_product_attr.js" charset="utf-8"></script>
+
 <footer>
     <div class="about" id="about_me">
         <h3>Кратко обо мне</h3>
@@ -121,6 +143,10 @@
             <li><a href="https://t.me/mrdyaika"><img src="images/telegram_icon.png"></a></li>
         </ul>
     </div>
+
+    <!-- скрипт -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script-change_product_attr.js" charset="utf-8"></script>
 </footer>
 </body>
 </html>
