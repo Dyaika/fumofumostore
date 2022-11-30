@@ -139,4 +139,12 @@
 }
 @media (max-width: 1100px) {
 
+    body{
+        display: grid;
+        grid-template-columns: 100% 0%;
+        grid-template-areas: "h h h"
+        "m m m"
+        "a a a"
+        "f f f";
+    }
 }
