@@ -139,6 +139,7 @@ nav ul li a {
 footer{
     display: flex;
     justify-content: space-evenly;
+    align-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: left;

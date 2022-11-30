@@ -1,34 +1,34 @@
 {
-  "fumos": [
-    {
+  "fumos": {
+    "yuyuko":{
       "name": "Yuyuko",
-      "ver1": {
+      "V1": {
         "cost": 2940,
         "year": 2010,
-        "image": "images/yuyukoV1_5.jpg",
+        "image": "images/yuyukoV1.jpg",
         "url": "https://www.gift-gift.jp/nui/nui040.html"
       },
-      "ver1_5": {
+      "V1_5": {
         "cost": 5000,
         "year": 2017,
-        "image": "images/yuyukoV1.jpg",
+        "image": "images/yuyukoV1_5.jpg",
         "url": "https://www.gift-gift.jp/nui/nui490.html"
       }
     },
-    {
+    "cirno":{
       "name": "Cirno",
-      "ver1": {
+      "V1": {
         "cost": 2940,
         "year": 2009,
         "image": "images/cirnoV1.jpg",
         "url": "https://www.gift-gift.jp/nui/nui014.html"
       },
-      "ver1_5": {
+      "V1_5": {
         "cost": 4400,
         "year": 2018,
         "image": "images/cirnoV1_5.jpg",
         "url": "https://www.gift-gift.jp/nui/nui558.html"
       }
     }
-  ]
+  }
 }

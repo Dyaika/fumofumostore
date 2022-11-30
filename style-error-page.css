@@ -1,0 +1,5 @@
+body{
+    grid-template-areas: "h h h"
+"m m m"
+"f f f";
+}

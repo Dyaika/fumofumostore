@@ -1,4 +1,4 @@
-@media (max-width: 790px) {
+@media (max-width: 850px) {
 
     header{
         position: relative;
@@ -120,7 +120,7 @@
     }
     footer #socials ul{
         flex-direction: row;
-        width: 80vw;
+        width: 90vw;
     }
     body{
         display: grid;
