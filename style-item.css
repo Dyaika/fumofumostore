@@ -7,7 +7,7 @@ main{
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 2fr 3fr;
-    grid-gap: 5vw;
+    grid-gap: 0.5vw;
     grid-template-areas: "prod-h2 prod-h2"
 "prod-img prod-short"
 "prod-img prod-ver"
