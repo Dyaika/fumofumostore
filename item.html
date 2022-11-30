@@ -1,15 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ошибка! FumoFumo Store</title>
+    <title>FumoFumo Store</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-mobile.css">
     <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-item.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
     </style>
@@ -29,16 +29,68 @@
         </ul>
     </nav>
     <h1 id="storeName">
-        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100"></a>
+        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100" alt=""></a>
     </h1>
 </header>
-<main>
-    <div align="center">
-    <h2 id="oops">Упс...</h2>
-    <p id="errorMessage">Похоже такой страницы еще не существует</p>
-    <a href="index.html">Верните меня на сайт!</a>
-    </div>
+
+<main class="container">
+    <h2>Ююко Сайгедзи</h2>
+
+    <!-- Картинка -->
+    <section class="image_section">
+        <img data-image="V1" src="images/yuyukoV1.jpg" alt="">
+    </section>
+
+    <!-- Краткое описание -->
+    <section class="short_description_section">
+        <p>Окунитесь в атмосферу Touhou PCB, к серии плюшевых игрушек FumoFumo присоединяется Ююко Сайгёдзи, принцесса призраков Хакугёро!</p>
+    </section>
+
+    <!-- Выбор версии -->
+    <section class="version_section">
+        <span>Версия</span>
+        <div class="color-choose">
+            <div>
+                <input type="radio" id="v1" name="vers" value="ver1" checked>
+                <label for="v1"><span>V1</span></label>
+            </div>
+            <div>
+                <input type="radio" id="v1_5" name="vers" value="ver1_5">
+                <label for="v1_5"><span>V1.5</span></label>
+            </div>
+        </div>
+
+        <a href="reviews.html">Уже есть у вас? поделитесь мнением!</a>
+    </section>
+
+    <!-- Цена -->
+    <section class="product_price_section">
+        <span id="price">2940¥</span>
+        <div id="buy-wrapper">
+            <a href="https://www.gift-gift.jp/nui/nui040.html" id="buy"><strong>Купить</strong></a>
+        </div>
+    </section>
+
+    <!-- Полное описание -->
+    <section class="full_description_section">
+        <p><pre>
+    "Я видела зловещий сон...
+    Весенний ветер унес всю нашу весну.
+    И ветер был черным."
+        </pre></p>
+        <p>
+            На этот раз мы ещё более тщательно воспроизвели детали костюма! Рост сидя составляет около 20 см, а шляпа является съёмной
+        </p>
+        <div>Год выпуска:<div id="year">2010</div></div>
+    </section>
+
 </main>
+<aside>
+    Эсайд. Отзывы
+</aside>
+<div id="info-for-script">yuyuko</div>
+<!-- скрипт -->
+<script src="script-change_product_attr.js" charset="utf-8"></script>
 <footer>
     <div class="about" id="about_me">
         <h3>Кратко обо мне</h3>
@@ -70,8 +122,5 @@
         </ul>
     </div>
 </footer>
-</body>
-</html>
-
 </body>
 </html>

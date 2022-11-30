@@ -46,7 +46,7 @@ header{
 main{
     margin: 0;
     position: relative;
-    min-height: 70vh;
+    min-height: 60vh;
     padding-left: 10px;
     background: linear-gradient(#0077e61a, rgba(255, 192, 203, 0));
 }
@@ -56,10 +56,9 @@ aside{
     background-color: rgba(173, 12, 12, 0.1);
 }
 footer {
-    z-index: 2;
-    position: relative;
-    min-height: 100px;
-    padding: 20px;
+    //z-index: 2;
+    //position: relative;
+    min-height: 10vh;
     background: #004C95;
     border-radius: 0 0 10px 10px;
     text-align: center;
@@ -231,3 +230,4 @@ footer #socials ul li:nth-child(2)::after{
 footer #socials ul li:hover::after{
     transform: translateY(-100%);
 }
+/*общая структура*/
