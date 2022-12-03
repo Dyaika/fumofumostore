@@ -109,8 +109,15 @@ grid-area: prod-ver;
     transform: scale(1, 1);
 }
 #reviews{
+    overflow-x: hidden;
+    overflow-y: auto;
     position: sticky;
+    max-height: 100vh;
     top: 0;
+}
+#reviews h3{
+    font-size: 2rem;
+    text-align: center;
 }
 .review{
     background-color: #6db0f38c;
@@ -184,12 +191,26 @@ main img{
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+    #reviews{
+        position: relative;
+        max-height: 30vh;
+    }
+}
+.price::after{
+    content: "¥";
+}
+#cite::before{
+    content: "      \"";
+}
+#cite::after, .review_text::before, .review_text::after{
+    content: "\"";
+}
+.customer_name::after{
+    content: ":";
 }
 @media (max-width: 850px) {
     .short_description_section, .version_section{
-    font-size: 1rem;
-}
-    #reviews{
-        position: relative;
+        font-size: 1rem;
     }
+
 }
