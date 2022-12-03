@@ -1,0 +1,213 @@
+:root{
+    --item-border-rad: calc(60px - 2vw);
+}
+.good_wrapper{
+    background-color: #c1d7ff;
+    border-radius: var(--item-border-rad);
+    display: flex;
+    width: 19%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    transition-duration: 0.2s;
+}
+.good_wrapper img{
+
+    transition-duration: 0.2s;
+    border-radius: var(--item-border-rad) var(--item-border-rad) calc(var(--item-border-rad) / 2) calc(var(--item-border-rad) / 2);
+    width: 100%;
+}
+.good_wrapper h3{
+    color: rgba(28, 57, 204, 0.79);
+}
+.good{
+    width: 100%;
+}
+main #list_goods{
+    margin: 3vw 0;
+}
+footer{
+    z-index: 0;
+}
+#list_goods{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.price{
+    color: white;
+    font-size: 1.6rem;
+}
+.price:hover{
+    color: var(--col-h3);
+}
+.price::before{
+    content: "От ";
+}
+.price::after{
+    content: "¥";
+}
+aside{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 7%;
+    align-content: space-evenly;
+}
+aside #params{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 7%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+@media (max-width: 1700px) {
+    .good_wrapper{
+        transition-duration: 0.2s;
+        width: 23%;
+    }
+}
+
+@media (max-width: 1100px) {
+    aside{
+        margin: 0;
+        padding: 10px 0;
+    }
+    aside #params{
+        padding: 2%;
+    }
+    aside h4{
+        margin: 10px 0;
+    }
+    .good_wrapper{
+        align-content: start;
+    }
+    .good_wrapper, .good_wrapper img{
+        transition-duration: 0.2s;
+        width: 40vw;
+    }
+    body{
+        display: grid;
+        grid-template-columns: 100% 0;
+        grid-template-areas: "h h h"
+        "a a a"
+        "m m m"
+        "f f f";
+    }
+}
+@media (max-width: 850px) {
+    .good_wrapper, .good_wrapper img{
+        transition-duration: 0.2s;
+        width: 55vw;
+    }
+}
+.good_wrapper:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    transition-duration: 0.25s;
+}
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+aside label{
+    font-size: 1.2rem;
+}
+aside button{
+    font-size: 1rem;
+    border-radius: 1em;
+    background-color: white;
+    border-color: var(--col-h3);
+    border-style: solid;
+}
+aside button:hover{
+    background-color: #c1e0fc;
+    color: white;
+}
+aside button:active{
+    background-color: #9dcefc;
+    color: white;
+}
+aside button:active, aside button:focus{
+    box-shadow: 0px 0px 5px 5px rgba(4, 37, 68, 0.11);
+}
+/*Кастомный чекбокс*/
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Скрываем обычный чекбокс браузера */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* создаем свой чекбокс */
+.checkmark {
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+}
+.container input:focus ~ .checkmark, .container input:active ~ .checkmark{
+    box-shadow: 0px 0px 5px 5px rgba(0, 76, 149, 0.13);
+}
+/* при наведени цвет станет серым */
+.container:hover input ~ .checkmark {
+    background-color: #e3e3e3;
+}
+
+/* при выборе станет синим */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.m_price{
+    border-radius: 0.3rem;
+    border-style: solid;
+}

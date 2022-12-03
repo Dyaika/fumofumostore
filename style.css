@@ -246,7 +246,7 @@ footer #socials ul li::after{
     transition-timing-function: ease-in-out;
     border-radius: 50%;
 }
-footer #socials ul li:hover img{
+footer #socials ul li:hover img,footer #socials ul li a:focus img{
     filter: invert(100%);
 }
 footer #socials ul li:nth-child(2)::after{
@@ -254,5 +254,8 @@ footer #socials ul li:nth-child(2)::after{
 }
 footer #socials ul li:hover::after{
     transform: translateY(-100%);
+}
+button:hover{
+    cursor: pointer;
 }
 /*общая структура*/

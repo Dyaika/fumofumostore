@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<form name="contact" method="POST" data-netlify="true">
+    <p>
+        <label><input type="text" name="name" placeholder="Имя"/></label>
+    </p>
+    <p>
+        <label><input type="email" name="email" placeholder="Почта"/></label>
+    </p>
+    <p>
+        <label>Какая Фумо у Вас: <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+        </select></label>
+    </p>
+    <p>
+        <label><textarea name="message" placeholder="Ваш отзыв"></textarea></label>
+    </p>
+    <p>
+        <button type="submit">Отправить</button>
+    </p>
+</form>
 
 </body>
 </html>

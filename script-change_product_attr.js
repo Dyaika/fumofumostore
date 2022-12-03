@@ -76,7 +76,7 @@ if (flag){
 $('.version-choose label').on('click', function() {
     fumoVer = $(this).attr('data-ver');
     cur_fumo = json_data[fumoVer];
-    console.log(cur_fumo);
+    //console.log(cur_fumo);
     image.src = cur_fumo.image;
     a.href = cur_fumo.url;
     year.innerText = cur_fumo.year;

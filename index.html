@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-mobile.css">
     <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-list-goods.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
     </style>
@@ -33,11 +34,158 @@
 </header>
 
 <aside>
-    Эсайд
+    <h3>Параметры поиска</h3>
+    <section id="params">
+        <h4>Цена</h4>
+        <label>Min, ¥
+            <input class="m_price" id="min_price" type='text'  onkeypress="return onlyNumberKey(event)" maxlength="11" placeholder = 0>
+        </label>
+        <label>Max, ¥
+            <input class="m_price" id="max_price" type="text" onkeypress="return onlyNumberKey(event)" maxlength="11" placeholder = 10000>
+        </label>
+        <script>
+            function onlyNumberKey(evt) {
+                // Only ASCII character in that range allowed
+                var ASCIICode = evt.which ? evt.which : evt.keyCode;
+                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+                    //alert("Only numbers are allowed!");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        <ul><h4>Серия</h4>
+            <li>
+                <label class="container">Embodiment of Scarlet Devil
+                    <input class="game" type="checkbox" value="eosd">
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="container">Perfect Cherry Blossom
+                    <input class="game" type="checkbox" value="pcb">
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+            <li>
+                <label class="container">Subterranean Animism
+                    <input class="game" type="checkbox" value="sa">
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+        </ul>
+    </section>
+    <button id="submit_params">Применить</button>
 </aside>
 <main>
-    <a href="item.html">Жрун</a>
-    <a href="item2.html">Сырник</a>
+    <h2>Товары</h2>
+    <section id="list_goods">
+
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+        <div class="good_wrapper">
+            <a class="good_link" href="item0.html">
+                <div class="good">
+                    <img src="images/yuyukoV1.jpg" alt="">
+                    <h3 class="item_name">Название</h3>
+                    <div class="price">999</div>
+                </div>
+            </a>
+        </div>
+
+        
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script-list-goods.js" charset="utf-8"></script>
 </main>
 <footer>
     <div class="about" id="about_me">
