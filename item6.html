@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-mobile.css">
     <link rel="stylesheet" href="style-animation.css">
-    <link rel="stylesheet" href="style-list-goods.css">
+    <link rel="stylesheet" href="style-item.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
     </style>
@@ -29,62 +29,74 @@
         </ul>
     </nav>
     <h1 id="storeName">
-        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100"></a>
+        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100" alt=""></a>
     </h1>
 </header>
 
-<aside>
-    <h3>Параметры поиска</h3>
-    <section id="params">
-        <h4>Цена</h4>
-        <label>Min, ¥
-            <input class="m_price" id="min_price" type='text'  onkeypress="return onlyNumberKey(event)" maxlength="11" placeholder = 0>
-        </label>
-        <label>Max, ¥
-            <input class="m_price" id="max_price" type="text" onkeypress="return onlyNumberKey(event)" maxlength="11" placeholder = 10000>
-        </label>
-        <script>
-            function onlyNumberKey(evt) {
-                // Only ASCII character in that range allowed
-                var ASCIICode = evt.which ? evt.which : evt.keyCode;
-                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
-                    //alert("Only numbers are allowed!");
-                    return false;
-                }
-                return true;
-            }
-        </script>
-        <ul><h4>Серия</h4>
-            <li>
-                <label class="container">Embodiment of Scarlet Devil
-                    <input class="game" type="checkbox" value="eosd">
-                    <span class="checkmark"></span>
-                </label>
-            </li>
-            <li>
-                <label class="container">Perfect Cherry Blossom
-                    <input class="game" type="checkbox" value="pcb">
-                    <span class="checkmark"></span>
-                </label>
-            </li>
-            <li>
-                <label class="container">Subterranean Animism
-                    <input class="game" type="checkbox" value="sa">
-                    <span class="checkmark"></span>
-                </label>
-            </li>
+<main class="container">
+    <h2 id="name"></h2>
+
+    <!-- Картинка -->
+    <section class="image_section">
+        <img id="fumoImage" src="" alt="">
+    </section>
+
+    <!-- Краткое описание -->
+    <section class="short_description_section">
+        <p id="short_desc"></p>
+    </section>
+
+    <!-- Выбор версии -->
+    <section class="version_section">
+        <h3>Версия</h3>
+        <div class="version-choose">
+            <div>
+                <input type="radio" id="v1" name="vers" value="ver1" checked class="vers-input">
+                <label for="v1" data-ver="V1" class="vers-label vers-label1"><span>V1</span></label>
+            </div>
+            <div>
+                <input type="radio" id="v1_5" name="vers" value="ver1_5" class="vers-input">
+                <label for="v1_5" data-ver="V1_5" class="vers-label vers-label2"><span>V1.5</span></label>
+            </div>
+        </div>
+
+        <a href="reviews.html">Уже есть у вас? поделитесь мнением!</a>
+    </section>
+
+    <!-- Цена -->
+    <section class="product_price_section">
+        <span class="price"></span>
+        <div id="buy-wrapper">
+            <a href="" id="buy"><strong>Купить</strong></a>
+        </div>
+    </section>
+
+    <!-- Полное описание -->
+    <section class="full_description_section">
+        <h3>Описание</h3>
+        <p><pre id="cite">
+        </pre></p>
+        <p id="full_desc">
+        </p>
+        <h3 id="info">Информация о продукте</h3>
+        <ul>
+            <li>Модель: <b id="model_info"></b></li>
+            <li>Тематика: <b>Touhou Project</b></li>
+            <li>Дата выхода: <b id="year">2010</b></li>
+            <li>Высота: <b>20 см</b></li>
+            <li>Продавец: <b>Gift</b></li>
         </ul>
     </section>
-    <button id="submit_params">Применить</button>
-</aside>
-<main>
-    <h2>Товары</h2>
-    <section id="list_goods">
 
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-    <script src="script-list-goods.js" charset="utf-8"></script>
+
 </main>
+<aside>
+    <div id="reviews">
+        <h3>Отзывы</h3>
+        <div id="info-for-script">chen</div>
+    </div>
+</aside>
+
 <footer>
     <div class="about" id="about_me">
         <h3>Кратко обо мне</h3>
@@ -115,6 +127,10 @@
             <li><a href="https://t.me/mrdyaika"><img src="images/telegram_icon.png"></a></li>
         </ul>
     </div>
+
+    <!-- скрипт -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script-change_product_attr.js" charset="utf-8"></script>
 </footer>
 </body>
 </html>

@@ -37,6 +37,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
+    align-items: flex-start;
 }
 
 .price{

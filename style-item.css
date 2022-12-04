@@ -6,7 +6,7 @@ main{
     position: relative;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 2fr;
     grid-gap: 0.5vw;
     grid-template-areas: "prod-h2 prod-h2"
 "prod-img prod-short"
@@ -29,16 +29,22 @@ main h3{
 }
 .image_section{
     grid-area: prod-img;
+    border-radius: 2rem;
+}
+.short_description_section{
+
+    grid-area: prod-short;
 }
 .short_description_section, .version_section{
-    font-size: 2rem;
-    grid-area: prod-short;
+    font-size: 1.6rem;
 }
 .version_section a{
     font-size: 1rem;
+    margin: auto;
 }
 .image_section img{
     max-width: 50vw;
+    position: relative;
 }
 .version_section{
 grid-area: prod-ver;
@@ -52,7 +58,12 @@ grid-area: prod-ver;
 }
 .full_description_section{
     grid-area: prod-full;
-    left: 0;
+    font-size: 1.6rem;
+    //left: 0;
+}
+main h3{
+    font-size: 1.6em;
+//left: 0;
 }
 #info-for-script{
     display: none;
@@ -149,6 +160,9 @@ grid-area: prod-ver;
 main img{
     border-radius: 2rem;
 }
+#short_desc{
+    margin: 3px;
+}
 .version-choose label{
     padding: 0 1rem;
     box-sizing: border-box;
@@ -183,13 +197,20 @@ main img{
 "prod-ver prod-ver"
 "prod-price prod-price"
 "prod-full prod-full";
-        justify-items: center;
+        justify-items: left;
     }
     .product_price_section, .version_section{
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-evenly;
+    }
+    .full_description_section{
+        font-size: 1rem;
+        width: 100%;
+        position: relative;
     }
     #reviews{
         position: relative;
