@@ -1,6 +1,6 @@
 {
   "fumos": {
-    "all_fumo_names": ["yuyuko", "cirno", "reimu", "marisa", "yukari", "youmu", "chen"],
+    "all_fumo_names": ["yuyuko", "cirno", "reimu", "marisa", "yukari", "youmu", "chen", "remilia"],
     "possible_games": ["eosd", "pcb", "sa"],
     "yuyuko":{
       "id": 0,
@@ -207,6 +207,31 @@
         "year": 2017,
         "image": "images/chenV1_5.png",
         "url": "https://www.gift-gift.jp/nui/nui523.html"
+      }
+    },
+    "remilia": {
+      "id": 7,
+      "games": [
+        "eosd"
+      ],
+      "name": "Ремилия Скарлет",
+      "short_desc": "пусто",
+      "cite": "пусто",
+      "full_desc": "Gift, официальные японские производители, в сотрудничестве с группой \"ANGELTYPE\" разработали дизайн этих мягких игрушек и в точности воспроизвели очарование Ремилии! Игрушка подойдет как детям, так и любителям коллекционарования, и уж точно всем фанатам Touhou Project.",
+      "model_info": "Touhou Plushie Series [Remilia Scarlet]",
+      "reviews": [
+      ],
+      "V1": {
+        "cost": 3024,
+        "year": 2009,
+        "image": "images/remiliaV1.png",
+        "url": "https://www.gift-gift.jp/nui/nui005.html"
+      },
+      "V1_5": {
+        "cost": 4000,
+        "year": 2019,
+        "image": "images/remiliaV1_5.png",
+        "url": "https://www.gift-gift.jp/nui/nui686.html"
       }
     }
   }

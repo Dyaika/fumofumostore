@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FumoFumo Store</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
+    <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-item.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+    </style>
+</head>
+<body>
+<header>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <nav id="mainMenu">
+        <ul>
+            <li class="left"><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li class="right"><a href="about-us.html">О нас</a></li>
+        </ul>
+    </nav>
+    <h1 id="storeName">
+        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100" alt=""></a>
+    </h1>
+</header>
+
+<main class="container">
+    <h2 id="name"></h2>
+
+    <!-- Картинка -->
+    <section class="image_section">
+        <img id="fumoImage" src="" alt="">
+    </section>
+
+    <!-- Краткое описание -->
+    <section class="short_description_section">
+        <p id="short_desc"></p>
+    </section>
+
+    <!-- Выбор версии -->
+    <section class="version_section">
+        <h3>Версия</h3>
+        <div class="version-choose">
+            <div>
+                <input type="radio" id="v1" name="vers" value="ver1" checked class="vers-input">
+                <label for="v1" data-ver="V1" class="vers-label vers-label1"><span>V1</span></label>
+            </div>
+            <div>
+                <input type="radio" id="v1_5" name="vers" value="ver1_5" class="vers-input">
+                <label for="v1_5" data-ver="V1_5" class="vers-label vers-label2"><span>V1.5</span></label>
+            </div>
+        </div>
+
+        <a href="reviews.html">Уже есть у вас? поделитесь мнением!</a>
+    </section>
+
+    <!-- Цена -->
+    <section class="product_price_section">
+        <span class="price"></span>
+        <div id="buy-wrapper">
+            <a href="" id="buy"><strong>Купить</strong></a>
+        </div>
+    </section>
+
+    <!-- Полное описание -->
+    <section class="full_description_section">
+        <h3>Описание</h3>
+        <p><pre id="cite">
+        </pre></p>
+        <p id="full_desc">
+        </p>
+        <h3 id="info">Информация о продукте</h3>
+        <ul>
+            <li>Модель: <b id="model_info"></b></li>
+            <li>Тематика: <b>Touhou Project</b></li>
+            <li>Дата выхода: <b id="year">2010</b></li>
+            <li>Высота: <b>20 см</b></li>
+            <li>Продавец: <b>Gift</b></li>
+        </ul>
+    </section>
+
+
+</main>
+<aside>
+    <div id="reviews">
+        <h3>Отзывы</h3>
+        <div id="info-for-script">remilia</div>
+    </div>
+</aside>
+
+<footer>
+    <div class="about" id="about_me">
+        <h3>Кратко обо мне</h3>
+        <p>
+            Я - Разшильдяев Александр, студент РТУ МИРЭА. Данный сайт является моим видением магазина игрушек, здесь вы можете узнать цены на игрушки Fumo и посетить сайты, действительно их продающие.
+        </p>
+    </div>
+    <div class="links" id="mini_nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="about-us.html">О нас</a></li>
+        </ul>
+    </div>
+    <div class="links" id="telmail">
+        <h3>Мои контакты</h3>
+        <ul>
+            <li><a href="mailto:khjmhdyna@mozmail.com">khjmhdyna@mozmail.com</a></li>
+            <li><a href="tel:+7 996 533 9584">+7 996 533 9584</a></li>
+        </ul>
+    </div>
+    <div class="contacts" id="socials">
+        <h3>Мои соцсети</h3>
+        <ul>
+            <li><a href="https://vk.com/mrdyaika"><img src="images/vk_icon.png"></a></li>
+            <li><a href="https://t.me/mrdyaika"><img src="images/telegram_icon.png"></a></li>
+        </ul>
+    </div>
+
+    <!-- скрипт -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script-change_product_attr.js" charset="utf-8"></script>
+</footer>
+</body>
+</html>
