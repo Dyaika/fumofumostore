@@ -14,3 +14,16 @@
         opacity: 1;
     }
 }
+
+@keyframes drops1 {
+    0%, 100%{
+        visibility: visible;
+        background-color: rgba(213, 174, 255, 0.26);
+        transform: translateY(-100%) translateX(-100%) scale(1);
+    }
+    50%{
+        visibility: visible;
+        background-color: rgba(255, 215, 174, 0.25);
+        transform: translateX(0%) translateY(0%) scale(1);
+    }
+}

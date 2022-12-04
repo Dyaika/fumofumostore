@@ -2,29 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FumoFumo Store</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
+    <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-list-goods.css">
+    <link rel="stylesheet" href="style-reviews.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+    </style>
 </head>
 <body>
-<form name="contact" method="POST" data-netlify="true">
-    <p>
-        <label><input type="text" name="name" placeholder="Имя"/></label>
-    </p>
-    <p>
-        <label><input type="email" name="email" placeholder="Почта"/></label>
-    </p>
-    <p>
-        <label>Какая Фумо у Вас: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-        </select></label>
-    </p>
-    <p>
-        <label><textarea name="message" placeholder="Ваш отзыв"></textarea></label>
-    </p>
-    <p>
-        <button type="submit">Отправить</button>
-    </p>
-</form>
+<header>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <nav id="mainMenu">
+        <ul>
+            <li class="left"><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li class="right"><a href="about-us.html">О нас</a></li>
+        </ul>
+    </nav>
+    <h1 id="storeName">
+        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100"></a>
+    </h1>
+</header>
 
+<aside>
+    <h3>Оставьте свой отзыв!</h3>
+    <div id="make_review_wrapper">
+        <form name="make_review" data-netlify="true">
+            <input id="in_name" type="text" name="name"  placeholder="Имя" maxlength="10" required/>
+            <input id="in_mail" type="email" name="email" placeholder="Почта" required maxlength=20/>
+            <label id="lab_fumotype">Какая Фумо у Вас: <select id="sel_fumotype" name="fumo_type" >
+            </select></label>
+            <textarea id="ta_review" name="message" placeholder="Ваш отзыв" required></textarea>
+            <button id="btn_send" type="submit">Отправить</button>
+        </form>
+    </div>
+</aside>
+<main>
+    <h2>Отзывы покупателей</h2>
+    <section id="reviews">
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script-reviews.js" charset="utf-8"></script>
+</main>
+<footer>
+    <div class="about" id="about_me">
+        <h3>Кратко обо мне</h3>
+        <p>
+            Я - Разшильдяев Александр, студент РТУ МИРЭА. Данный сайт является моим видением магазина игрушек, здесь вы можете узнать цены на игрушки Fumo и посетить сайты, действительно их продающие.
+        </p>
+    </div>
+    <div class="links" id="mini_nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="about-us.html">О нас</a></li>
+        </ul>
+    </div>
+    <div class="links" id="telmail">
+        <h3>Мои контакты</h3>
+        <ul>
+            <li><a href="mailto:khjmhdyna@mozmail.com">khjmhdyna@mozmail.com</a></li>
+            <li><a href="tel:+7 996 533 9584">+7 996 533 9584</a></li>
+        </ul>
+    </div>
+    <div class="contacts" id="socials">
+        <h3>Мои соцсети</h3>
+        <ul>
+            <li><a href="https://vk.com/mrdyaika"><img src="images/vk_icon.png"></a></li>
+            <li><a href="https://t.me/mrdyaika"><img src="images/telegram_icon.png"></a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
+

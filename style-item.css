@@ -212,10 +212,6 @@ main img{
         width: 100%;
         position: relative;
     }
-    #reviews{
-        position: relative;
-        max-height: 50vh;
-    }
 }
 .price::after{
     content: "¥";
@@ -234,4 +230,8 @@ main img{
         font-size: 1rem;
     }
 
+    #reviews{
+        position: relative;
+        max-height: 50vh;
+    }
 }
