@@ -145,42 +145,45 @@ aside{
 .review_wrapper:hover{
     border-radius: 0.2em;
 }
-.review::before, .review::after{
-    content: "";
-    background-color: rgba(99, 177, 255, 0.11);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    width: 10rem;
-    height: 10rem;
-    border-left: 1px solid rgba(255,255,255,0.3);
-    border-top: 1px solid rgba(255,255,255,0.3);
-    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.07);
-    position: absolute;
-    z-index: 3;
-    opacity: 0;
-    transform: translateX(0%) translateY(0%) scale(3);
-    transition: all 0.2s ease;
-    animation: drops1 4s ease-in-out infinite;
-}
-.review_wrapper:hover .review::before, .review_wrapper:hover .review::after{
+@media (min-width: 1100px) {
+    .review::before, .review::after{
+        content: "";
+        background-color: rgba(99, 177, 255, 0.11);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        width: 10rem;
+        height: 10rem;
+        border-left: 1px solid rgba(255,255,255,0.3);
+        border-top: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.07);
+        position: absolute;
+        z-index: 3;
+        opacity: 0;
+        transform: translateX(0%) translateY(0%) scale(3);
+        transition: all 0.2s ease;
+        animation: drops1 4s ease-in-out infinite;
+    }
+    .review_wrapper:hover .review::before, .review_wrapper:hover .review::after{
 
-    width: 4rem;
-    height: 4rem;
-    opacity: 1;
-    transition: all 0.2s ease;
+        width: 4rem;
+        height: 4rem;
+        opacity: 1;
+        transition: all 0.2s ease;
     //animation: drops1 4s ease-in-out infinite;
+    }
+    .review{
+        position: relative;
+    }
+    .review::before{
+        right: -4%;
+        top: -2%;
+    }
+    .review::after{
+        top: 90%;
+        animation-delay: -2s;
+    }
 }
-.review{
-    position: relative;
-}
-.review::before{
-    right: -4%;
-    top: -2%;
-}
-.review::after{
-    top: 90%;
-    animation-delay: -2s;
-}
+
 body{
     overflow-x: hidden;
 }
