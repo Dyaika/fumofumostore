@@ -1,0 +1,119 @@
+.info{
+    background-color: #edefff;
+    margin: 5vw;
+    padding: 2vw;
+    border-radius: calc(1rem + 1vw);
+    box-shadow: 10px 10px 60px -8px rgba(6, 14, 49, 0.25);
+}
+.openable{
+    --max-lines: 3;
+    --line-height: 1.4;
+    line-height: var(--line-height);
+    max-height: none;
+    overflow: hidden;
+    position: relative;
+}
+h3{
+    position: relative;
+}
+@supports selector(.openable:has(+ .expand_btn)) {
+
+    .openable{
+        height: calc(1em * var(--max-lines));
+    }
+    .expand_btn{
+        position: relative;
+        appearance: none;
+        background-color: #48B790;
+        border-radius: 1em;
+        padding: 0.5em;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+    .expand_btn:hover{
+        filter: brightness(0.9);
+    }
+    .expand_btn::before{
+        content: "Больше";
+        color: white;
+    }
+    .expand_btn:checked::before{
+        content: "Меньше";
+    }
+    .openable:has(+ .expand_btn:checked){
+        max-height: none;
+        height: fit-content;
+    }
+}
+.expand_btn{
+    appearance: none;
+}
+
+.info::before{
+    position: absolute;
+    content: "";
+    border-radius: calc(0.5vw + 0.5rem) calc(1vw + 1rem);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #544BF5, #2FF4AE);
+}
+@media (max-width: 850px) {
+    .info{
+        position: relative;
+        border-radius: calc(0.5vw + 0.5rem) calc(1vw + 1rem);
+        color: white;
+    }
+    .info h3{
+        color: white;
+        transition-duration: 0.3s;
+    }
+    .info::before{
+        position: absolute;
+        content: "";
+        border-radius: calc(0.5vw + 0.5rem) calc(1vw + 1rem);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #544BF5, #2FF4AE);
+    }
+}
+@media (min-width: 851px) {
+    .info{
+        --back-anim: 0.7s;
+        overflow: hidden;
+        transition-duration: var(--back-anim);
+        position: relative;
+    }
+    .info:hover{
+        border-radius: calc(0.5vw + 0.5rem) calc(1vw + 1rem);
+        transition-duration: 0.3s;
+        color: white;
+    }
+    .info h3{
+        transition-duration: var(--back-anim);
+    }
+    .info:hover h3{
+        color: white;
+        transition-duration: 0.3s;
+    }
+    .info::before{
+        left: -100%;
+        transition-duration: var(--back-anim);
+    }
+    .info:hover::before{
+        transition-timing-function: ease-in-out;
+        transform: translateX(100%);
+        transition-duration: 0.3s;
+    }
+    .expand_btn {
+        background-color: var(--col-h3);
+        transition-duration: var(--back-anim);
+    }
+    .info:hover .expand_btn{
+        transition-duration: 0.3s;
+        background-color: #48B790;
+    }
+}

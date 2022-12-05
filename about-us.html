@@ -2,9 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FumoFumo Store</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
+    <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-error-page.css">
+    <link rel="stylesheet" href="style-about-us.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+    </style>
 </head>
 <body>
+<header>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <nav id="mainMenu">
+        <ul>
+            <li class="left"><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li class="right"><a href="about-us.html">О нас</a></li>
+        </ul>
+    </nav>
+    <h1 id="storeName">
+        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100"></a>
+    </h1>
+</header>
+<main>
+    <h2>О нас</h2>
+    <section class="info">
+        <h3>Кто мы?</h3>
+        <section class="openable" id="openable1">
+            Мы - магазин FumoFumo Store, предоставляем ассортимент мягких игрушек из серии Touhou Project. Мягкие игрушки Touhou, как и все игрушки, имеют свои особенности, но в целом, это мягкие игрушки в виде самых известных персонажей из игр Touhou.
+            Если вы хотите купить мягкую игрушку, то наши предложения будут вам интересны, а если вы фанат, то мы не можем оставить вас без подарка.
+            В нашем магазине вы найдете:
+            - мягкие игрушки серии Touhou - мягкие игрушки из игры Touhou (например, Мариса Кирисаме, Ёму Конпаку, Рейму Хакурей и многие другие)
+        </section>
+        <input class="expand_btn" type="checkbox">
+    </section>
 
+    <section class="info">
+        <h3>Цель проекта</h3>
+        <section class="openable" id="openable2">
+            Наша цель - сделать покупку мягких игрушек  из Японии более доступной для жителей России, ведь оригинальный сайт производителя
+            недоступен для простого покупателя ввиду языкового барьера. Мы делаем свою работу максимально качественно, так как понимаем, что
+            от этого зависит Ваша радость и хорошее настроение. Все игрушки, которые Вы видите на сайте, прошли тщательный отбор в Японии.
+            К сожалению, мы пока сами не отправляем мягкие игрушки в Россию, но точно поможем с выбором, а когда Вы определитесь, вы можете
+            перейти на сайт производителя сразу на страницу выбранного вами товара!
+            Наличие проверяйте на сайте производителя
+        </section>
+        <input class="expand_btn" type="checkbox">
+    </section>
+
+    <section class="info">
+        <h3>Что такое Фумо?</h3>
+        <section class="openable" id="openable3">
+            Мягкие Игрушки Фумо Fumo - это мини версии знаменитых
+            героев и персонажей из серии компьютерных игр Touhou Project (Проект "Восток"). Сделаны из качественного хлопка и плюша, приятны на ощупь, безопасные элементы. Перед этими чудными плюшевыми игрушками Тохо не сможет устоять никто, особенно порадует фанатов и тех, кто собирает свою коллекцию.
+            Отлично подойдут для создания своих веселых видео, обнимашек, успокаивает как антистресс. Милые игрушки Fumo впишутся в любой интерьер, и станут отличным дополнением для гостиной/дивана/спальни/офиса. Пускай эти прекрасные куклы Фумо будут дарить Вам только положительные эмоции, уют, комфорт и хорошее настроение! Собери их всех!
+        </section>
+        <input class="expand_btn" type="checkbox">
+    </section>
+</main>
+<footer>
+    <div class="about" id="about_me">
+        <h3>Кратко обо мне</h3>
+        <p>
+            Я - Разшильдяев Александр, студент РТУ МИРЭА. Данный сайт является моим видением магазина игрушек, здесь вы можете узнать цены на игрушки Fumo и посетить сайты, действительно их продающие.
+        </p>
+    </div>
+    <div class="links" id="mini_nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="about-us.html">О нас</a></li>
+        </ul>
+    </div>
+    <div class="links" id="telmail">
+        <h3>Мои контакты</h3>
+        <ul>
+            <li><a href="mailto:khjmhdyna@mozmail.com">khjmhdyna@mozmail.com</a></li>
+            <li><a href="tel:+7 996 533 9584">+7 996 533 9584</a></li>
+        </ul>
+    </div>
+    <div class="contacts" id="socials">
+        <h3>Мои соцсети</h3>
+        <ul>
+            <li><a href="https://vk.com/mrdyaika"><img src="images/vk_icon.png"></a></li>
+            <li><a href="https://t.me/mrdyaika"><img src="images/telegram_icon.png"></a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

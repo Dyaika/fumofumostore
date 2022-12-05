@@ -57,6 +57,11 @@
           "rev_name": "Марк",
           "rev_text": "Отличный подарок кому угодно!",
           "rev_images": ["images/rev7.jpg"]
+        },
+        {
+          "rev_name": "Степан",
+          "rev_text": "tout va bien, seul le jouet a commencé à geler mes grenouilles, j'ai dû l'enfermer dans une bouteille",
+          "rev_images": []
         }
       ],
       "V1": {

@@ -87,6 +87,7 @@ aside{
     content: "\"";
 }
 .review_wrapper{
+    box-shadow: 0.5vw 0.5vw 1px 1px rgba(9, 48, 91, 0.18);
     font-size: 1.6rem;
     border-radius: 1em;
     display: grid;
