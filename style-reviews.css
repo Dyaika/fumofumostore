@@ -54,7 +54,7 @@ aside{
 }
 @media (min-width: 1100px),  (max-width: 600px){
     #make_review_wrapper form{
-        grid-template-rows: 2em 2em 1fr 7fr 2em;
+        grid-template-rows: 2em 2em 2fr 4fr 2em;
         grid-template-areas: "name" "mail" "fumotype" "review" "btn" ;
     }
 

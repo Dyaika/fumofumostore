@@ -41,7 +41,7 @@ main h3{
 
 .converter_section .container .converter{
     background: var(--col-form2);
-    padding: 3em;
+    padding: 3vw;
     border-radius: 20px;
     border-left: 1px solid rgba(255,255,255,0.3);
     border-top: 1px solid rgba(255,255,255,0.3);
@@ -286,6 +286,7 @@ main h3{
 }
 @media (max-width: 1000px) {
     .converter{
+        padding: 10px;
         display: grid;
         grid-template-areas: "hdr hdr"
         "fmtype fmtype"
