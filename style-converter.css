@@ -120,7 +120,7 @@ main h3{
     cursor: pointer;
 }
 
-.converter_section > .container > .converter > input[type="button"]:active {
+.converter_section > .container > .converter > input[type="button"]:active  {
     background: var(--col-form2);
 }
 
