@@ -29,6 +29,8 @@ h3{
         padding: 0.5em;
         cursor: pointer;
         margin-top: 1rem;
+        min-height: 2.5em;
+        min-width: 5em;
     }
     .expand_btn:hover{
         filter: brightness(0.9);
@@ -36,6 +38,8 @@ h3{
     .expand_btn::before{
         content: "Больше";
         color: white;
+        min-height: 1em;
+        min-width: fit-content;
     }
     .expand_btn:checked::before{
         content: "Меньше";
