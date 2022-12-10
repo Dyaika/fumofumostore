@@ -69,6 +69,7 @@ if (document.getElementById("v1_5").checked){
 //слушатель ввода
 $('#yens_input').on('change', function() {
     fumolist_box.value = "none";
+    output_v.value = '';
 });
 
 //слушатель типа валюты
@@ -76,12 +77,29 @@ $('#sel_valute option').on('click', function() {
     console.log("cur valute ",this.value);
     valutetype = this.value;
     output_v.placeholder = this.value;
+    output_v.value = '';
+});
+//слушатель типа валюты2
+$('#sel_valute').on('change', function() {
+    console.log("cur valute ",this.value);
+    valutetype = this.value;
+    output_v.placeholder = this.value;
+    output_v.value = '';
 });
 //слушатель типа фумо
 $('.op_fumotype').on('click', function() {
     console.log("cur fumo ",this.value);
     if (this.value !== "none"){
         input_v.value = json_data[this.value][fumover].cost;
+        output_v.value = '';
+    }
+});
+//слушатель типа фумо2
+$('#sel_fumotype').on('change', function() {
+    console.log("cur fumo ",this.value);
+    if (this.value !== "none"){
+        input_v.value = json_data[this.value][fumover].cost;
+        output_v.value = '';
     }
 });
 //слушатель версии фумо
@@ -90,6 +108,7 @@ $('.version-choose input').on('click', function() {
     fumover = this.value;
     if (fumolist_box.value !== "none"){
         input_v.value = json_data[fumolist_box.value][this.value].cost;
+        output_v.value = '';
     }
 });
 //слушатель кнопки конвертации
