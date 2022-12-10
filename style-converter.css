@@ -1,0 +1,297 @@
+:root{
+    --col-h2: #004C95;
+    --col-h3: #3D99F3;
+    --col-form2: #0077e61a;
+    --col-viol: #0077e61a;
+}
+main{
+    position: relative;
+    overflow: hidden;
+}
+body{
+    position: relative;
+}
+h2{
+    position: relative;
+}
+main h3{
+    color: var(--col-h2)
+}
+/*ФОРМА*/
+
+#valute_output{
+
+}
+
+
+.converter_section{
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.converter_section .container {
+    position: relative;
+    max-width: 90vw;
+    top: 2px;
+}
+
+.converter_section .container .converter{
+    background: var(--col-form2);
+    padding: 3em;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.converter_section > .container > .converter{
+
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    color: var(--col-h2);
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.converter_section > .container > .converter > a {
+    text-decoration: none;
+    color: var(--col-h2);
+    font-size: 12px;
+}
+
+.converter_section > .container > .converter > a:hover {
+    text-shadow: 2px 2px 6px #00000040;
+}
+
+.converter_section > .container > .converter > a:active {
+    text-shadow: none;
+}
+
+.converter_section > .container > .converter > input{
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+
+    color: var(--col-h2);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.converter_section select{
+    border-radius: 2em;
+
+    color: var(--col-h2);
+    background-color: white;
+    border: solid var(--col-h3) 0.1rem;
+}
+.converter_section option{
+    color: var(--col-h2);
+}
+
+.converter_section > .container > .converter > input:hover {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+}
+.converter_section > .container > .converter > input[type="button"] {
+    width: 150px;
+    font-size: 1rem;
+}
+
+.converter_section > .container > .converter > input[type="button"]:hover {
+    cursor: pointer;
+}
+
+.converter_section > .container > .converter > input[type="button"]:active {
+    background: var(--col-form2);
+}
+
+
+
+.converter_section > .container > .converter:hover{
+}
+
+.converter_section > .container > ::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px var(--col-h2);
+}
+.converter_section > .container > .drops{
+    display: none;
+}
+
+@media (min-width: 851px) {
+    .converter_section > .container > .drops{
+        animation: animate2 5s ease-in-out infinite paused;
+        display: block;
+        position: relative;
+    }
+
+    .converter_section > .container > .drops > .drop{
+
+        animation: animate2 5s ease-in-out paused;
+        background: var(--col-form2);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        border-left: 1px solid rgba(255,255,255,0.3);
+        border-top: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+        position: absolute;
+        transition: all 0.2s ease;
+    }
+    .converter_section > .container > .drops > .drop-1 {
+        height: 80px;
+        width: 80px;
+        top: 70px;
+        left: -40px;
+        z-index: -1;
+    }
+
+    .converter_section > .container > .drops > .drop-2 {
+        height: 80px;
+        width: 80px;
+        top: 100px;
+        right: -120px;
+    }
+
+    .converter_section > .container > .drops > .drop-3 {
+        height: 100px;
+        width: 100px;
+        bottom: -20px;
+        right: 250px;
+        z-index: -1;
+    }
+
+    .converter_section > .container > .drops > .drop-4 {
+        height: 120px;
+        width: 120px;
+        top: -60px;
+        right: -60px;
+    }
+
+    .converter_section > .container > .drops > .drop-5 {
+        height: 60px;
+        width: 60px;
+        bottom: 270px;
+        left: -140px;
+    }
+
+    .converter_section > .container > .drops > .drop-6 {
+        height: 90px;
+        width: 90px;
+        bottom: -160%;
+        left: 6%;
+    }
+
+    .converter_section > .container > .drops > .drop-7 {
+        height: 40px;
+        width: 40px;
+        top: -100%;
+        left: 400px;
+    }
+    .converter_section  .container:not(:hover)  .drops .drop:nth-child(2n+1){
+
+        animation: animate2 5s ease-in-out infinite paused;
+    }
+    .converter_section  .container:not(:hover)  .drops .drop:nth-child(2n){
+        animation: animate2 5s ease-in-out infinite reverse paused;
+    }
+    .converter_section  .container:hover  .drops .drop:nth-child(2n+1){
+        animation: animate2 5s ease-in-out infinite running;
+    }
+    .converter_section  .container:hover  .drops .drop:nth-child(2n){
+        animation: animate2 5s ease-in-out infinite reverse running;
+    }
+}
+
+.converter_section > .container > a,
+.converter_section > .container > input:focus,
+.converter_section > .container > select:focus,
+.converter_section > .container > textarea:focus,
+.converter_section > .container > button:focus {
+    outline: none;
+}
+.converter{
+    display: grid;
+    align-content: center;
+    grid-template-areas: "hdr hdr"
+"fmtype fmtype"
+"vers vers"
+"inpt outpt"
+"valch btn";
+}
+#pos1{
+    grid-area: hdr;
+    font-size: 2rem;
+}
+#lab_fumotype{
+
+    grid-area: fmtype;
+    font-size: 1.2rem;
+}
+.vers{
+    grid-area: vers;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.vers .version-choose{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+#yens_input{
+    margin: 1rem auto;
+    grid-area: inpt;
+}
+#valute_output{
+    margin: 1rem auto;
+    grid-area: outpt;
+
+}
+
+#valute{
+    margin: auto;
+    grid-area: valch;
+
+}
+#yens_to_btn{
+    grid-area: btn;
+    margin: auto;
+
+}
+@media (max-width: 1000px) {
+    .converter{
+        display: grid;
+        grid-template-areas: "hdr hdr"
+        "fmtype fmtype"
+        "vers vers"
+        "inpt inpt"
+        "outpt outpt"
+        "valch btn";
+    }
+}

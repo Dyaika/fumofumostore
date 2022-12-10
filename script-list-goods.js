@@ -47,7 +47,7 @@ $('.container input').on('click', function() {
     console.log(cb + ": " + possible_games[cb]);
 });
 
-//слушатель фильтра
+//слушатель кнопки применения фильтра
 $('aside button').on('click', function() {
     console.log("Submit clicked");
     update_fumos();

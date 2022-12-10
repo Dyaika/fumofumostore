@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FumoFumo Store</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
+    <link rel="stylesheet" href="style-animation.css">
+    <link rel="stylesheet" href="style-error-page.css">
+    <link rel="stylesheet" href="style-converter.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+    </style>
+</head>
+<body>
+<header>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <nav id="mainMenu">
+        <ul>
+            <li class="left"><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="converter.html">Конвертер</a></li>
+            <li class="right"><a href="about-us.html">О нас</a></li>
+        </ul>
+    </nav>
+    <h1 id="storeName">
+        <a href="index.html"><img src="images/fumofumostorelogo2.png" height="100"></a>
+    </h1>
+</header>
+<main>
+    <h2>Конвертация валюты</h2>
+    <section class="converter_section">
+        <div class="container">
+            <div class="drops">
+                <div class="drop drop-1"></div>
+                <div class="drop drop-2"></div>
+                <div class="drop drop-3"></div>
+            </div>
+            <div class="converter">
+                <div id="pos1">
+                    <b>Введите стоимость или выберите товар</b>
+                </div>
+                <label id="lab_fumotype">Какая Фумо Вас интересует:
+                    <select id="sel_fumotype" name="fumo_type" >
+                        <option value="none" class="op_fumotype" selected>none</option>
+                    </select>
+                </label>
+                <div class="vers">
+                    <h3>Версия</h3>
+                    <div class="version-choose">
+                        <div>
+                            <input type="radio" id="v1" name="vers" value="V1" checked class="vers-input">
+                            <label for="v1" data-ver="V1" class="vers-label vers-label1"><span>V1</span></label>
+                        </div>
+                        <div>
+                            <input type="radio" id="v1_5" name="vers" value="V1_5" class="vers-input">
+                            <label for="v1_5" data-ver="V1_5" class="vers-label vers-label2"><span>V1.5</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="yens" id="yens_input" type="number" onkeypress="return onlyNumberKey(event)" step="10" placeholder = "JPY">
+                <script>
+                    function onlyNumberKey(evt) {
+                        // Only ASCII character in that range allowed
+                        var ASCIICode = evt.which ? evt.which : evt.keyCode;
+                        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+                            //alert("Only numbers are allowed!");
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+                <input id="valute_output" type="text" disabled class="result" placeholder="RUB">
+                <label id="valute">Ваша валюта: <select id="sel_valute" name="valute_type" >
+                    <option value="RUB" selected>Рубли</option>
+                    <option value="KZT">Тенге</option>
+                    <option value="UAH">Гривны</option>
+                    <option value="BYN" >Бел. рубли</option>
+                    <option value="TRY" >Лиры</option>
+                </select></label>
+                <input id="yens_to_btn" type="button" value="Перевести из ¥">
+            </div>
+            <div class="drops">
+                <div class="drop drop-4"></div>
+                <div class="drop drop-5"></div>
+                <div class="drop drop-6"></div>
+                <div class="drop drop-7 "></div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="about" id="about_me">
+        <h3>Кратко обо мне</h3>
+        <p>
+            Я - Разшильдяев Александр, студент РТУ МИРЭА. Данный сайт является моим видением магазина игрушек, здесь вы можете узнать цены на игрушки Fumo и посетить сайты, действительно их продающие.
+        </p>
+    </div>
+    <div class="links" id="mini_nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="converter.html">Конвертер валют</a></li>
+            <li><a href="about-us.html">О нас</a></li>
+        </ul>
+    </div>
+    <div class="links" id="telmail">
+        <h3>Мои контакты</h3>
+        <ul>
+            <li><a href="mailto:khjmhdyna@mozmail.com">khjmhdyna@mozmail.com</a></li>
+            <li><a href="tel:+7 996 533 9584">+7 996 533 9584</a></li>
+        </ul>
+    </div>
+    <div class="contacts" id="socials">
+        <h3>Мои соцсети</h3>
+        <ul>
+            <li><a href="https://vk.com/mrdyaika"><img src="images/vk_icon.png"></a></li>
+            <li><a href="https://t.me/mrdyaika"><img src="images/telegram_icon.png"></a></li>
+        </ul>
+    </div>
+</footer>
+<!-- скрипт -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+
+<script src="script-converter.js" charset="utf-8"></script>
+</body>
+</html>
