@@ -95,11 +95,11 @@ aside #params{
     }
     body{
         display: grid;
-        grid-template-columns: 100% 0;
-        grid-template-areas: "h h h"
-        "a a a"
-        "m m m"
-        "f f f";
+        grid-template-columns: 100%;
+        grid-template-areas: "h"
+        "a"
+        "m"
+        "f";
     }
 }
 @media (max-width: 850px) {

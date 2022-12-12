@@ -141,10 +141,10 @@
 
     body{
         display: grid;
-        grid-template-columns: 100% 0%;
-        grid-template-areas: "h h h"
-        "m m m"
-        "a a a"
-        "f f f";
+        grid-template-columns: 100%;
+        grid-template-areas: "h"
+        "m"
+        "a"
+        "f";
     }
 }
